@@ -5,10 +5,3 @@
     = link_to @issue.repository, @issue.github_url
   = GitHub::Markdown.render_gfm(@issue.body).html_safe
   = link_to 'Edit', edit_issue_path(@issue)
-
-  %h2 Collaborators
-  
-  - @issue.collaborators.each do |collaborator|
-    %p
-      = link_to image_tag(gravatar_url(collaborator.gravatar_id, '40')), "https://github.com/#{collaborator.login}"
-      = link_to collaborator.login, "https://github.com/#{collaborator.login}"
