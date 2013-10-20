@@ -1,7 +1,9 @@
 .col-md-8
   %h1 Reported issues
   
-  %p * list of issues here*
+  = render @reported_issues
+  
+  = link_to 'Report an issue', new_issue_path, :class => 'btn btn-primary'
   
   %h1 Issues on your repos
   
