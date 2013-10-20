@@ -3,6 +3,7 @@ class IssuesController < ApplicationController
 
   def index
     @reported_issues = current_user.issues
+    @collaborating_issues = current_user.collaborating_issues
   end
   
   def show

@@ -4,7 +4,8 @@
   = render @reported_issues
   
   = link_to 'Report an issue', new_issue_path, :class => 'btn btn-primary'
-  
-  %h1 Issues on your repos
-  
-  %p * list of issues here*
+
+.col-md-4  
+  %h1 Issues you can see
+  = render @collaborating_issues
+    

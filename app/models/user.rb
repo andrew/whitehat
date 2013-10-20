@@ -32,6 +32,10 @@ class User < ActiveRecord::Base
     nickname
   end
   
+  def collaborating_issues
+    Collaborator.where(:github_user_id => uid).map(&:issue)
+  end
+  
   private
   
   def self.extract_info(hash)
