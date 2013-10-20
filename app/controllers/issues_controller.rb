@@ -23,11 +23,16 @@ class IssuesController < ApplicationController
   end
   
   def edit
-    
+    @issue = Issue.find(params[:id])
   end
   
   def update
-    
+    @issue = Issue.find(params[:id])
+    if @issue.update_attributes(params[:issue])
+      redirect_to @issue
+    else
+      render :edit
+    end
   end
   
   private
