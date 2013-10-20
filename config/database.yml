@@ -18,9 +18,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: whitehat_development
-  pool: 5
-  username: whitehat
-  password:
+  host: localhost
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -47,9 +45,7 @@ test:
   adapter: postgresql
   encoding: unicode
   database: whitehat_test
-  pool: 5
-  username: whitehat
-  password:
+  host: localhost
 
 production:
   adapter: postgresql
