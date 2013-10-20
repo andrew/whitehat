@@ -1,0 +1,7 @@
+.col-md-8
+  %h1
+    = @issue.title
+    on
+    = link_to @issue.repository, @issue.github_url
+  = GitHub::Markdown.render_gfm(@issue.body).html_safe
+  = link_to 'Edit', edit_issue_path(@issue)
