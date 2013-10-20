@@ -1,0 +1,21 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    %title Whitehat
+    = stylesheet_link_tag    "application", media: "all"
+    = csrf_meta_tags
+  %body
+    .container
+      .masthead
+        %h3.text-muted Whitehat
+
+      .row
+        = yield
+
+      .footer
+        %p © Company 2013
+    = javascript_include_tag "application"
