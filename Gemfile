@@ -13,5 +13,6 @@ gem 'omniauth-github'
 gem 'simple_form'
 gem 'octokit'
 gem 'protected_attributes'
+gem "github-markdown"
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'

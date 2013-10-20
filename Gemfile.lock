@@ -48,6 +48,7 @@ GEM
     execjs (2.0.2)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    github-markdown (0.5.5)
     haml (4.0.3)
       tilt
     hashie (2.0.5)
@@ -144,6 +145,7 @@ PLATFORMS
 DEPENDENCIES
   anjlab-bootstrap-rails!
   coffee-rails (~> 4.0.0)
+  github-markdown
   haml
   jquery-rails
   octokit
