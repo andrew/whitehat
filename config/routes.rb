@@ -1,5 +1,5 @@
 Whitehat::Application.routes.draw do
-  root 'issues#index'
+  root 'home#index'
   
   get '/login',  :to => 'sessions#new',     :as => 'login'
   get '/logout', :to => 'sessions#destroy', :as => 'logout'
