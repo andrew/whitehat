@@ -3,4 +3,8 @@ class Issue < ActiveRecord::Base
   validates_presence_of :repository, :title, :body, :user_id
   
   belongs_to :user
+  
+  def github_url
+    "https://github.com/#{repository}"
+  end
 end
