@@ -7,4 +7,8 @@ class Issue < ActiveRecord::Base
   def github_url
     "https://github.com/#{repository}"
   end
+  
+  def collaborators
+    user.github_client.collaborators(repository)
+  end
 end
