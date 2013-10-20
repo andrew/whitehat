@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessible :uid, :provider, :nickname, :email, :gravatar_id, :token
 
+  has_many :issues
+
   def self.find_by_nickname!(nickname)
     where(['lower(nickname) =?', nickname.downcase]).first!
   end
