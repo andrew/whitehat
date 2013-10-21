@@ -1,0 +1,5 @@
+- for comment in @issue.comments
+  = render comment
+  - if current_user == comment.user
+    = link_to "Edit", edit_issue_comment_path(@issue.id, comment.id)
+    = link_to "Delete", issue_comment_path(@issue.id, comment.id), :method => 'delete'

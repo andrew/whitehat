@@ -7,5 +7,7 @@ Whitehat::Application.routes.draw do
   match '/auth/:provider/callback', :to => 'sessions#create', :via => [:get, :post]
   match '/auth/failure',            :to => 'sessions#failure', :via => [:get, :post]
 
-  resources :issues
+  resources :issues do
+    resources :comments
+  end
 end

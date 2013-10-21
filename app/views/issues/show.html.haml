@@ -1,7 +1,15 @@
 .col-md-8
+  - if flash[:notice]
+    .notice= flash[:notice]
   %h1
     = @issue.title
     on
     = link_to @issue.repository, @issue.github_url
   = GitHub::Markdown.render_gfm(@issue.body).html_safe
   = link_to 'Edit', edit_issue_path(@issue)
+
+.col-md-8
+  = render 'issue_comments'
+
+.col-md-8
+  = link_to "New comment", new_issue_comment_path(@issue)

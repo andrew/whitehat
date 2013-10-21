@@ -1,0 +1,7 @@
+%p
+  %b= comment.user.nickname
+  commented
+  %span
+    = time_ago_in_words(comment.created_at)
+    ago
+%p= GitHub::Markdown.render_gfm(comment.body).html_safe

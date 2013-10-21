@@ -1,9 +1,10 @@
 class Issue < ActiveRecord::Base
   attr_accessible :repository, :title, :body
   validates_presence_of :repository, :title, :body, :user_id
-  
+
   belongs_to :user
   has_many :collaborators
+  has_many :comments
   
   after_create :create_collaborators
   

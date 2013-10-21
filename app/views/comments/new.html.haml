@@ -1,0 +1,5 @@
+.col-md-8
+  %h1 New comment
+  
+  = form_for @comment, :url => issue_comments_path do |form|
+    = render form
